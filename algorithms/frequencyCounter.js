@@ -8,11 +8,13 @@ function isAnagram(str1, str2){
     const frequencyCounter1 = {}
     const frequencyCounter2 = {}
     // Store the frequency of each characters in the strings
-    for (let char of str1){
-        frequencyCounter1[char] = (frequencyCounter1[char] || 0) + 1
-    }
-    for (let char of str2){
-        frequencyCounter2[char] = (frequencyCounter2[char] || 0) + 1
+    for (let i = 0;i < str1.length; i++){
+        // store the character count of str1
+        const char1 = str1[i]
+        frequencyCounter1[char1] = (frequencyCounter1[char1] || 0) + 1
+        // store the character count of str2
+        const char2 = str2[i]
+        frequencyCounter2[char2] = (frequencyCounter2[char2] || 0) + 1
     }
     // Check if the frequency of each characters match
     for(let key in frequencyCounter1){
